@@ -19,11 +19,6 @@ export default {
   },
   setup() {
     const items = ref([
-      { x: 2, y: 0, h: 1 },
-      { x: 0, y: 2, w: 4 },
-      { x: 3, y: 1, h: 1 },
-      { x: 3, y: 0, h: 1 },
-      { x: 0, y: 0, w: 2, h: 1 },
     ]);
 
     function additem() {

@@ -7,7 +7,7 @@ import { GridStack } from "gridstack";
 import "gridstack/dist/h5/gridstack-dd-native";
 import "gridstack/dist/gridstack.min.css";
 import "gridstack/dist/gridstack-extra.min.css";
-import { onMounted, reactive, ref, watch, h, toRef } from "vue";
+import { onMounted, ref, watch } from "vue";
 export default {
   emits: ["added", "dragstart", "resizestop"],
   props: {
