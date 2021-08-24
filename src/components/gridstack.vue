@@ -7,7 +7,7 @@ import { GridStack } from "gridstack";
 import "gridstack/dist/h5/gridstack-dd-native";
 import "gridstack/dist/gridstack.min.css";
 import "gridstack/dist/gridstack-extra.min.css";
-import { onMounted, ref, watch } from "vue";
+import { onMounted, ref, watch, watchEffect } from "vue";
 export default {
   emits: ["added", "dragstart", "resizestop"],
   props: {
@@ -48,10 +48,13 @@ export default {
     watch(props.griditems, () => {
       grid.removeAll() //remove and re init on prop update
       grid.load(props.griditems);
+    }, {
+      flush: 'sync'
     });
 
+
     return {
-      gridref,
+      gridref
     };
   },
 };
